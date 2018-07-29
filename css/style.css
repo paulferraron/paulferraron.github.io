@@ -20,6 +20,11 @@ body
     padding-left: 20px;
 }
 
+#presentation
+{
+    text-align: justify;
+}
+
 #photo_id
 {
     height: 233px;
@@ -217,6 +222,7 @@ body
 {
     padding-top: 0;
     padding-bottom: 0;
+    text-align: justify;
 }
 
 .timeline-body > p
