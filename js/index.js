@@ -1,3 +1,4 @@
+// Animation de scrolling via la barre de navigation
 $('header nav a').on('click', function(e){
     e.preventDefault();
     
@@ -9,13 +10,18 @@ $('header nav a').on('click', function(e){
     });
 });
 
-$('[href="#competences"]').on('click', function(e){
+
+// Animation de remplissage des compétences
+var skillsLoaded = false;
+
+function loadSkills()
+{
     $(".progress-bar").each(function(){
         var bar = this;
         var width = 0;
         var max = bar.style.maxWidth.split('%')[0];
         var id = setInterval(frame, 5);
-        
+
         function frame()
         {
             if (width >= max)
@@ -24,41 +30,46 @@ $('[href="#competences"]').on('click', function(e){
             }
             else
             {
-                ++width;
+                width += 2;
                 bar.style.width = width + '%';
             }
         }
     });
+        
+    skillsLoaded = true;
+}
+
+function unloadSkills()
+{
+    $(".progress-bar").each(function(){
+        this.style.width = '0%';
+    });
+        
+    skillsLoaded = false;
+}
+
+$(window).on('load', function(e){
+    if($('[href="#competences"]').hasClass("active") && !skillsLoaded)
+    {
+        loadSkills();
+    }
+});
+
+
+$('[href="#competences"]').on('click', function(e){
+    if(!skillsLoaded)
+    {
+        loadSkills();
+    }
 });
 
 $(window).on('scroll', function(e){
-    if($('[href="#competences"]').hasClass("active"))
+    if($('[href="#competences"]').hasClass("active") && !skillsLoaded)
     {
-        $(".progress-bar").each(function(){
-            var bar = this;
-            var width = 0;
-            var max = bar.style.maxWidth.split('%')[0];
-            var id = setInterval(frame, 5);
-
-            function frame()
-            {
-                if (width >= max)
-                {
-                    clearInterval(id);
-                }
-                else
-                {
-                    ++width;
-                    bar.style.width = width + '%';
-                }
-            }
-        });
+        loadSkills();
     }
-    else
+    else if(!$('[href="#competences"]').hasClass("active") && skillsLoaded)
     {
-        $(".progress-bar").each(function(){
-            this.style.width = '0%';
-        });
+        unloadSkills();
     }
 });
-
