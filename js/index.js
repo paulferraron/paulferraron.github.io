@@ -10,6 +10,10 @@ $('header nav a').on('click', function(e){
     });
 });
 
+// Animation d'accordéon pour le menu
+$(".navbar-nav .nav-link").on('click', function(e){
+    $(".navbar-collapse").collapse("hide");
+});
 
 // Animation de remplissage des compétences
 var skillsLoaded = false;
