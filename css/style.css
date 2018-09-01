@@ -203,8 +203,8 @@ h1
     color: #fff;
     width: 50px;
     height: 50px;
-    line-height: 46px; /* line-height = height - border-width */
-    font-size: 1.2em;
+    line-height: 46px; /* line-height = height - 2*border-width */
+    font-size: 20px;
     text-align: center;
     position: absolute;
     top: 16px;
