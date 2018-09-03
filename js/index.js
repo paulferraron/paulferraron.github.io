@@ -11,6 +11,11 @@ $('header nav a').on('click', function(e){
 });
 
 // Animation d'accordéon pour le menu
+$(".navbar .navbar-brand").on('click', function(e){
+    $(".navbar-collapse").collapse("hide");
+});
+
+
 $(".navbar-nav .nav-link").on('click', function(e){
     $(".navbar-collapse").collapse("hide");
 });

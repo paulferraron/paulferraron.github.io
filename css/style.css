@@ -1,17 +1,25 @@
 body
 {
     padding-top: 48px;
+    font-size: 1em;
 }
 
 .navbar
 {
     padding-top: 4px;
     padding-bottom: 4px;
+    max-height: 48px;
+    font-size: 1.1em;
+}
+
+.navbar-brand
+{
+    font-size: 1.2em;
 }
 
 h1
 {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .jumbotron
@@ -29,19 +37,33 @@ h1
 {
     body
     {
-        padding-top: 80px;
+        padding-top: 96px;
         font-size: 1.2em;
     }
     
     .navbar
     {
-        min-height: 80px;
+        max-height: none;
+        min-height: 96px;
+        font-size: 1.3em;
+    }
+    
+    .navbar-toggler
+    {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .navbar-toggler-icon
+    {
+        height: 50px;
+        width: 34px;
     }
     
     .jumbotron
     {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 }
 
