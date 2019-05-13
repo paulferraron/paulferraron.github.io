@@ -1,6 +1,6 @@
 body
 {
-    padding-top: 48px;
+    padding-top: 40px;
     font-size: 1em;
 }
 
@@ -8,18 +8,18 @@ body
 {
     padding-top: 4px;
     padding-bottom: 4px;
-    max-height: 48px;
+    max-height: 40px;
     font-size: 1.1em;
 }
 
 .navbar-brand
 {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 h1
 {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .jumbotron
@@ -28,42 +28,51 @@ h1
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 48px;
-    padding-right: 16px;
-    padding-bottom: 48px;
-    padding-left: 16px;
+    padding-right: 8px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+}
+
+#presentation, #experiences, #parcours, #competences, #passions
+{
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 992px)
 {
     body
     {
-        padding-top: 96px;
+        padding-top: 80px;
         font-size: 1.2em;
     }
     
     .navbar
     {
         max-height: none;
-        min-height: 96px;
+        min-height: 80px;
         font-size: 1.3em;
+    }
+    
+    .navbar-brand
+    {
+        font-size: 1.5em;
     }
     
     .navbar-toggler
     {
-        height: 60px;
-        width: 60px;
+        height: 64px;
+        width: 64px;
     }
     
     .navbar-toggler-icon
     {
-        height: 50px;
-        width: 34px;
+        height: 54px;
+        width: 38px;
     }
     
     .jumbotron
     {
-        padding-top: 96px;
-        padding-bottom: 96px;
+        padding-top: 88px;
     }
 }
 
@@ -86,11 +95,11 @@ h1
 
 #photo_id
 {
-    height: 233px;
-    width: 191px;
+    height: 280px;
+    width: 230px;
 }
 
-#experiences h2
+#experiences h3
 {
     text-align: center;
 }
@@ -139,7 +148,7 @@ h1
 /* Timeline vertical */
 .timeline {
     list-style: none;
-    padding: 20px 0 20px;
+    padding: 8px 0 8px;
     position: relative;
 }
 
@@ -159,7 +168,7 @@ h1
 }
 
 .timeline > li {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -333,18 +342,18 @@ h1
     border-color: white;
     border-width: 2px;
     
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 #competences .skill
 {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .carousel
 {
     margin: auto;
-    width: 65%;
+    width: 70%;
 }
 
 .carousel-inner img
@@ -354,8 +363,24 @@ h1
 
 #contact .btn
 {
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 32px;
+}
+
+.navigator
+{
+    left: 95%;
+}
+
+#navigator-up
+{
+    bottom: 98px;
+}
+
+#navigator-down
+{
+    bottom: 40px;
 }
 
 footer

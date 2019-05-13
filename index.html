@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <title>Paul Ferraron</title>
@@ -11,7 +11,7 @@
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="page-top">
         <header>
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" id="barreNavigation">
-                <a class="navbar-brand" href="#page-top">Paul Ferraron</a>
+                <a class="navbar-brand" id="linkToTop" href="#page-top">Paul Ferraron</a>
                 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -19,12 +19,12 @@
                 
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#presentation">Présentation</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#passions">Passions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkToPresentation" href="#presentation">Présentation</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkToExperiences" href="#experiences">Expériences</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkToParcours" href="#parcours">Parcours</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkToCompetences" href="#competences">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkToPassions" href="#passions">Passions</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkToContact" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -34,13 +34,13 @@
             <section class="row jumbotron" id="presentation">
                 <h1 class="col-sm-12 text-center">Présentation</h1>
                 <div class="col-sm-8">
-                    <p>
+                    <p class="col-sm-12">
                         Ingénieur en Informatique et Modélisation diplômé par l'<a href="https://www.isima.fr/" target="_blank">ISIMA</a> (Institut Supérieur d'Informatique, de Modélisation et de leurs Applications), je suis actuellement en mission chez Orange pour AUSY Montpellier en tant qu'Ingénieur en Conception/Développement Web et Responsable de Site.
                     </p>
-                    <p>
+                    <p class="col-sm-12">
                         Je suis particulièrement attiré par le développement d'applications web et/ou mobiles mais, en tant que meetup addict, je suis également en constante veille sur d'autres sujets tels que la Sécurité, l'Intelligence Artificielle, la Robotique ou encore la Réalité Virtuelle et la Réalité Augmentée.
                     </p>
-                    <p>
+                    <p class="col-sm-12">
                         Vous trouverez sur ce site mes expériences, mon parcours, mes compétences et mes passions. Je vous invite à me contacter pour plus d'informations.
                     </p>
                 </div>
@@ -52,7 +52,7 @@
             <section class="row jumbotron" style="background-color:#6C7A89; color: white" id="experiences">
                 <h1 class="col-sm-12 text-center">Expériences</h1>
                 <div class="col-sm-6" id="pro">
-                    <h2>Expériences professionnelles</h2>
+                    <h3>Expériences professionnelles</h3>
                     <ul class="timeline">
                         <li>
                             <div class="timeline-badge bg-dark">2018</div>
@@ -60,9 +60,9 @@
                                 <div class="timeline-heading">
                                     <h4 class="timeline-title">Responsable de site</h4>
                                     <h5>AUSY</h5>
+                                    <h6>De Janvier 2018 à aujourd'hui</h6>
                                 </div>
                                 <div class="timeline-body">
-                                    De Janvier 2018 à aujourd'hui
                                     <ul>
                                         <li>Organisation/Animation d’événements</li>
                                         <li>Accueil/Intégration des consultants</li>
@@ -128,7 +128,7 @@
                 </div>
                 
                 <div class="col-sm-6" id="perso">
-                    <h2>Expériences personnelles</h2>
+                    <h3>Expériences personnelles</h3>
                     <ul class="timeline">
                         <li class="timeline-inverted">
                             <div class="timeline-badge bg-dark">2019</div>
@@ -264,7 +264,7 @@
             <section class="row jumbotron" style="background-color:#6C7A89; color: white" id="competences">
                 <h1 class="col-sm-12 text-center">Compétences</h1>
                 
-                <h3 class="col-sm-12 text-center">Langages Web</h3>
+                <h4 class="col-sm-12 text-center">Langages Web</h4>
                 <div class="col-sm-4 col-md-3 col-lg-2 skill">
                     <span>PHP</span>
                     <div class="progress bg-dark">
@@ -304,7 +304,7 @@
                 
                 <hr class="col-12 separator">
                 
-                <h3 class="col-sm-12 text-center">Autres Langages</h3>
+                <h4 class="col-sm-12 text-center">Autres Langages</h4>
                 <div class="col-sm-4 col-md-3 col-lg-2 skill">
                     <span>Java</span>
                     <div class="progress bg-dark">
@@ -345,7 +345,7 @@
                 
                 <hr class="col-12 separator">
                 
-                <h3 class="col-sm-12 text-center">Outils</h3>
+                <h4 class="col-sm-12 text-center">Outils</h4>
                 <div class="col-sm-4 col-md-3 col-lg-2 skill">
                     <span>Git</span>
                     <div class="progress bg-dark">
@@ -385,7 +385,7 @@
                 
                 <hr class="col-12 separator">
                 
-                <h3 class="col-sm-12 text-center">Systèmes</h3>
+                <h4 class="col-sm-12 text-center">Systèmes</h4>
                 <div class="col-sm-4 col-md-3 col-lg-2 skill">
                     <span>Windows</span>
                     <div class="progress bg-dark">
@@ -406,7 +406,7 @@
                 </div>
             </section>
 
-            <section class="row jumbotron" id="passions">
+            <section class="row jumbotron" id="passions">                
                 <h1 class="col-sm-12 text-center">Passions</h1>
                 <div class="col-sm-12 text-center">
                     <div class="carousel slide img-thumbnail" data-ride="carousel" id="passionsCarousel">
@@ -452,17 +452,23 @@
                         </a>
                     </div>                 
                 </div>
-                
             </section>
 
-            <section class="row jumbotron" style="background-color:#6C7A89; color: white" id="contact">
-                <h1 class="col-sm-12 text-center">Contact</h1>                
+            <section class="row jumbotron" style="background-color:#6C7A89; color: white" id="contact">  
+                <h1 class="col-sm-12 text-center">Contact</h1>
+                
                 <div class="col-sm-12 text-center">
                     <a class="btn btn-light" href="https://www.linkedin.com/in/paul-ferraron/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a class="btn btn-light" href="http://fr.viadeo.com/fr/profile/paul.ferraron" target="_blank"><i class="fab fa-viadeo fa-2x"></i></a>
+                    <a class="btn btn-light" href="http://fr.viadeo.com/fr/profile/paul.ferraron" target="_blank"><i class="fab fa-viadeo-square fa-2x"></i></a>
+                    <a class="btn btn-light" href="https://github.com/paulferraron" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+                    <a class="btn btn-light" href="mailto:paul.ferraron@gmail.com" target="_blank"><i class="far fa-envelope fa-2x"></i></a>
                 </div>
             </section>
         </div>
+        
+        <!-- Boutons de navigation -->
+        <button class="btn btn-dark fixed-bottom navigator" id="navigator-up"><i class="fas fa-chevron-up fa-2x"></i></button>
+        <button class="btn btn-dark fixed-bottom navigator" id="navigator-down"><i class="fas fa-chevron-down fa-2x"></i></button>
         
         <footer class="container-fluid bg-dark">
             <div class="row">

@@ -5,19 +5,76 @@ $('header nav a').on('click', function(e){
     var hash = this.hash;
     $('html, body').animate({
         scrollTop: $(this.hash).offset().top
-    }, 1000, function(){
+    }, 750, function(){
         window.location.hash = hash;
     });
-});
-
-// Animation d'accordéon pour le menu
-$(".navbar .navbar-brand").on('click', function(e){
+    
     $(".navbar-collapse").collapse("hide");
 });
 
 
-$(".navbar-nav .nav-link").on('click', function(e){
-    $(".navbar-collapse").collapse("hide");
+// Switch de rubrique via les boutons de navigation
+$("#navigator-up").on('click', function(e){
+    if($('#linkToContact').hasClass("active"))
+    {
+        $('#linkToPassions').click();
+    }
+    else if($('#linkToPassions').hasClass("active"))
+    {
+        $('#linkToCompetences').click();
+    }
+    else if($('#linkToCompetences').hasClass("active"))
+    {
+        $('#linkToParcours').click();
+    }
+    else if($('#linkToParcours').hasClass("active"))
+    {
+        $('#linkToExperiences').click();
+    }
+    else if($('#linkToExperiences').hasClass("active"))
+    {
+        $('#linkToPresentation').click();
+    }
+});
+
+$("#navigator-down").on('click', function(e){
+    if($('#linkToPresentation').hasClass("active"))
+    {
+        $('#linkToExperiences').click();
+    }
+    else if($('#linkToExperiences').hasClass("active"))
+    {
+        $('#linkToParcours').click();
+    }
+    else if($('#linkToParcours').hasClass("active"))
+    {
+        $('#linkToCompetences').click();
+    }
+    else if($('#linkToCompetences').hasClass("active"))
+    {
+        $('#linkToPassions').click();
+    }
+    else if($('#linkToPassions').hasClass("active"))
+    {
+        $('#linkToContact').click();
+    }
+});
+
+/* Correctif de la navigation pour petits écrans
+   Dans le cas des petits écran, aucune rubrique n'est active lorsque qu'on accède au site via son adresse de base ou l'adresse du haut de page */
+$(window).on('load', function(e){
+    var url = new RegExp('#');
+    var urlBis = new RegExp('#page-top');
+    if(!url.test(window.location) || urlBis.test(window.location))
+    {
+        $('#linkToPresentation').addClass("active");
+    }
+});
+
+/* Correctif de la navigation pour petits écrans
+   Dans le cas des petits écran, aucune rubrique n'est active lorsque l'on est en haut de la page */
+$('#linkToTop').on('click', function(e){
+    $('#linkToPresentation').addClass("active");
 });
 
 // Animation de remplissage des compétences
