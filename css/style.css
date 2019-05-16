@@ -74,6 +74,11 @@ h1
     {
         padding-top: 88px;
     }
+    
+    #presentation, #experiences, #parcours, #competences, #passions
+    {
+        min-height: inherit;
+    }
 }
 
 #presentation
@@ -370,17 +375,25 @@ h1
 
 .navigator
 {
-    left: 95%;
+    left: 94%;
 }
 
 #navigator-up
 {
-    bottom: 98px;
+    bottom: 126px;
 }
 
 #navigator-down
 {
-    bottom: 40px;
+    bottom: 48px;
+}
+
+@media screen and (max-width: 992px)
+{
+    .navigator
+    {
+        left: 90%;
+    }
 }
 
 footer

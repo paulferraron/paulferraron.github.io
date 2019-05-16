@@ -1,7 +1,7 @@
 // Animation de scrolling via la barre de navigation
 $('header nav a').on('click', function(e){
     e.preventDefault();
-    
+
     var hash = this.hash;
     $('html, body').animate({
         scrollTop: $(this.hash).offset().top
@@ -10,6 +10,19 @@ $('header nav a').on('click', function(e){
     });
     
     $(".navbar-collapse").collapse("hide");
+    
+    /* Correctif de la navigation pour petits écrans
+    Dans le cas des petits écran, aucune rubrique n'est active lorsque l'on est en haut de la page
+    De plus, la classe active ne persiste pas sur la presentation même si on l'y ajoute...
+    D'ou le choix de l'ajouter à la marque */
+    if(e.target.id == "linkToTop")
+    {
+        $('#linkToTop').addClass("active");
+    }
+    else
+    {
+        $('#linkToTop').removeClass("active");
+    }
 });
 
 
@@ -35,10 +48,18 @@ $("#navigator-up").on('click', function(e){
     {
         $('#linkToPresentation').click();
     }
+    else if($('#linkToPresentation').hasClass("active"))
+    {
+        $('#linkToTop').click();
+    }
 });
 
 $("#navigator-down").on('click', function(e){
-    if($('#linkToPresentation').hasClass("active"))
+    if($('#linkToTop').hasClass("active"))
+    {
+        $('#linkToPresentation').click();
+    }
+    else if($('#linkToPresentation').hasClass("active"))
     {
         $('#linkToExperiences').click();
     }
@@ -67,15 +88,10 @@ $(window).on('load', function(e){
     var urlBis = new RegExp('#page-top');
     if(!url.test(window.location) || urlBis.test(window.location))
     {
-        $('#linkToPresentation').addClass("active");
+        $('#linkToTop').addClass("active");
     }
 });
 
-/* Correctif de la navigation pour petits écrans
-   Dans le cas des petits écran, aucune rubrique n'est active lorsque l'on est en haut de la page */
-$('#linkToTop').on('click', function(e){
-    $('#linkToPresentation').addClass("active");
-});
 
 // Animation de remplissage des compétences
 var skillsLoaded = false;
