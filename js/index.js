@@ -52,6 +52,11 @@ $("#navigator-up").on('click', function(e){
     {
         $('#linkToTop').click();
     }
+    else
+    {
+        // On doit avoir atteint le haut de page (ou presque) en scrollant manuellement
+        $('#linkToTop').click();
+    }
 });
 
 $("#navigator-down").on('click', function(e){
@@ -78,6 +83,11 @@ $("#navigator-down").on('click', function(e){
     else if($('#linkToPassions').hasClass("active"))
     {
         $('#linkToContact').click();
+    }
+    else
+    {
+        // On doit avoir atteint le haut de page (ou presque) en scrollant manuellement
+        $('#linkToPresentation').click();
     }
 });
 
