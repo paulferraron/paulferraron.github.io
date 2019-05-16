@@ -52,6 +52,10 @@ $("#navigator-up").on('click', function(e){
     {
         $('#linkToTop').click();
     }
+    else if($('#linkToTop').hasClass("active"))
+    {
+        // On est déjà en haut donc on ne fait rien
+    }
     else
     {
         // On doit avoir atteint le haut de page (ou presque) en scrollant manuellement
@@ -60,11 +64,7 @@ $("#navigator-up").on('click', function(e){
 });
 
 $("#navigator-down").on('click', function(e){
-    if($('#linkToTop').hasClass("active"))
-    {
-        $('#linkToPresentation').click();
-    }
-    else if($('#linkToPresentation').hasClass("active"))
+    if($('#linkToPresentation').hasClass("active"))
     {
         $('#linkToExperiences').click();
     }
@@ -83,6 +83,14 @@ $("#navigator-down").on('click', function(e){
     else if($('#linkToPassions').hasClass("active"))
     {
         $('#linkToContact').click();
+    }
+    else if($('#linkToContact').hasClass("active"))
+    {
+        // On est en bas donc on ne faire rien (pour l'instant)
+    }
+    else if($('#linkToTop').hasClass("active"))
+    {
+        $('#linkToPresentation').click();
     }
     else
     {

@@ -1,14 +1,14 @@
 body
 {
-    padding-top: 40px;
+    padding-top: 48px;
     font-size: 1em;
 }
 
 .navbar
 {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    max-height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    max-height: 48px;
     font-size: 1.1em;
 }
 
@@ -28,9 +28,9 @@ h1
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 48px;
-    padding-right: 8px;
+    padding-right: 16px;
     padding-bottom: 16px;
-    padding-left: 8px;
+    padding-left: 16px;
 }
 
 #presentation, #experiences, #parcours, #competences, #passions
@@ -42,14 +42,14 @@ h1
 {
     body
     {
-        padding-top: 80px;
+        padding-top: 96px;
         font-size: 1.2em;
     }
     
     .navbar
     {
         max-height: none;
-        min-height: 80px;
+        min-height: 96px;
         font-size: 1.3em;
     }
     
@@ -60,24 +60,24 @@ h1
     
     .navbar-toggler
     {
-        height: 64px;
-        width: 64px;
+        height: 72px;
+        width: 72px;
     }
     
     .navbar-toggler-icon
     {
-        height: 54px;
-        width: 38px;
+        height: 64px;
+        width: 44px;
     }
     
     .jumbotron
     {
-        padding-top: 88px;
+        padding-top: 96px;
     }
     
     #presentation, #experiences, #parcours, #competences, #passions
     {
-        min-height: inherit;
+        min-height: 50vh;
     }
 }
 
@@ -358,12 +358,17 @@ h1
 .carousel
 {
     margin: auto;
-    width: 70%;
+    width: 72%;
 }
 
 .carousel-inner img
 {
     width: 100%;
+}
+
+#contact
+{
+    min-height: 88vh;
 }
 
 #contact .btn
@@ -380,16 +385,21 @@ h1
 
 #navigator-up
 {
-    bottom: 126px;
+    bottom: 134px;
 }
 
 #navigator-down
 {
-    bottom: 48px;
+    bottom: 56px;
 }
 
 @media screen and (max-width: 992px)
 {
+    #contact
+    {
+        min-height: 50vh;
+    }
+    
     .navigator
     {
         left: 90%;
@@ -400,8 +410,8 @@ footer
 {
     color: darkgrey;
     line-height: 24px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 footer a
