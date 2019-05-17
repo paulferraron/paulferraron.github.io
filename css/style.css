@@ -19,6 +19,7 @@ body
 
 h1
 {
+    margin-top: 8px;
     margin-bottom: 16px;
 }
 
@@ -62,11 +63,12 @@ h1
     {
         height: 72px;
         width: 72px;
+        border-width: 2px;
     }
     
     .navbar-toggler-icon
     {
-        height: 64px;
+        height: 60px;
         width: 44px;
     }
     
@@ -77,7 +79,7 @@ h1
     
     #presentation, #experiences, #parcours, #competences, #passions
     {
-        min-height: 65vh;
+        min-height: 70vh;
     }
 }
 
@@ -358,7 +360,7 @@ h1
 .carousel
 {
     margin: auto;
-    width: 72%;
+    width: 71%;
 }
 
 .carousel-inner img
@@ -381,6 +383,10 @@ h1
 .navigator
 {
     left: 94%;
+    height: 62px;
+    width: 68px;
+    
+    background-color: rgb(24,24,24);
 }
 
 #navigator-up
