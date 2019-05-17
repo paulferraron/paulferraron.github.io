@@ -63,6 +63,7 @@ h1
     {
         height: 72px;
         width: 72px;
+        background-color: rgb(24,24,24);
         border-width: 2px;
     }
     
@@ -79,7 +80,7 @@ h1
     
     #presentation, #experiences, #parcours, #competences, #passions
     {
-        min-height: 70vh;
+        min-height: 71vh;
     }
 }
 
@@ -403,7 +404,7 @@ h1
 {
     #contact
     {
-        min-height: 65vh;
+        min-height: 71vh;
     }
     
     .navigator
