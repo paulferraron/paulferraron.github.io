@@ -80,7 +80,7 @@ h1
     
     #presentation, #experiences, #parcours, #competences, #passions
     {
-        min-height: 71vh;
+        min-height: 75vh;
     }
 }
 
@@ -404,7 +404,7 @@ h1
 {
     #contact
     {
-        min-height: 71vh;
+        min-height: 75vh;
     }
     
     .navigator
